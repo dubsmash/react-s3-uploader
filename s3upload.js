@@ -138,7 +138,7 @@ S3Upload.prototype.uploadToS3 = function(file, signResult) {
         }.bind(this);
     }
     xhr.setRequestHeader('Content-Type', file.type);
-    xhr.setRequestHeader('Content-MD5', CryptoJS.MD5(file).toString(CryptoJS.enc.Base64)}));
+    xhr.setRequestHeader('Content-MD5', CryptoJS.MD5(file).toString(CryptoJS.enc.Base64));
     if (this.contentDisposition) {
         var disposition = this.contentDisposition;
         if (disposition === 'auto') {
